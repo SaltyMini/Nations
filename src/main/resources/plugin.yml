@@ -1,0 +1,7 @@
+name: Nations
+version: '0.0.1'
+main: Clay.Sam.nations.Nations
+api-version: '1.21'
+
+world-generators:
+  WaterWorldGenerator: Clay.Sam.nations.WaterWorldGenerator
