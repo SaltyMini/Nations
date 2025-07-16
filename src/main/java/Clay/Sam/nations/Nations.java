@@ -9,7 +9,7 @@ import org.jspecify.annotations.Nullable;
 
 public final class Nations extends JavaPlugin {
 
-    private Plugin plugin;
+    private static Plugin plugin;
 
     @Override
     public void onEnable() {
@@ -28,5 +28,9 @@ public final class Nations extends JavaPlugin {
     @Override
     public @Nullable ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
         return new WaterWorldGenerator();
+    }
+
+    public static Plugin getPlugin() {
+        return plugin;
     }
 }
