@@ -16,8 +16,6 @@ public final class Nations extends JavaPlugin {
         plugin = this;
 
         getLogger().info("Nations plugin enabled - WaterWorldGenerator available");
-
-
     }
 
     @Override
