@@ -5,6 +5,7 @@ import org.bukkit.WorldCreator;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 import org.jspecify.annotations.Nullable;
 
 public final class Nations extends JavaPlugin {
@@ -24,7 +25,7 @@ public final class Nations extends JavaPlugin {
     }
 
     @Override
-    public @Nullable ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
+    public @Nullable ChunkGenerator getDefaultWorldGenerator(@NotNull String worldName, String id) {
         return new WaterWorldGenerator();
     }
 
