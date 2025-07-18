@@ -45,6 +45,11 @@ public class NationsCreate extends CommandStruct {
         //TODO: check if nation exists
         String nationName = args[0];
 
+        if(nationName.equalsIgnoreCase("none")) {
+            player.sendMessage("You cannot create a nation with the name 'none'. Please choose a different name.");
+            return;
+        }
+
         ymlManager.updateNationYMLFile(nationName, "name", nationName );
         ymlManager.updatePlayerYMLFile(player.getUniqueId(), "Nation", nationName);
 
