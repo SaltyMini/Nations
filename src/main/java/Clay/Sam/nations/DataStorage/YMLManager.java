@@ -17,7 +17,6 @@ public class YMLManager {
     private final Plugin plugin;
 
 
-
     public YMLManager() {
         plugin = Nations.getPlugin();
     }
@@ -37,7 +36,7 @@ public class YMLManager {
 
         dataFile = new File(plugin.getDataFolder(), uuid.toString() + ".yml");
 
-        if(plugin.getDataFolder().mkdirs()) {
+        if(!plugin.getDataFolder().mkdirs()) {
             plugin.getDataFolder().mkdir();
         }
 
@@ -50,12 +49,9 @@ public class YMLManager {
                 plugin.getLogger().info("Created " + fileName + ".yml");
             } catch (IOException e) {
                 plugin.getLogger().severe("Could not create " + fileName + ".yml");
-                e.printStackTrace();
             }
 
             dataConfig = YamlConfiguration.loadConfiguration(dataFile);
-
-            //TODO: Because this is using none as no nation, make sure no nation can be made with the name none
 
             /**
                 Default config
